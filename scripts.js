@@ -15,7 +15,7 @@ const products = [
 ]
 
 //Exercise 1
-console.log("Exercise 1:")
+console.log("Exercise 1: forEach method")
 console.log("\nNames:")
 names.forEach(name => console.log(name))
 console.log("\nProvinces:")
@@ -24,11 +24,18 @@ console.log("\nNames and Provinces:")
 names.forEach((name, index) => console.log(`${name} (${provinces[index]})`))
 
 //Exercise 2
-console.log("\nExercise 2:")
+console.log("\nExercise 2: Provinces to Uppercase")
 const provinceToUpperCase = provinces.map(province => province.toUpperCase())
 console.log(provinceToUpperCase)
 
 //Exercise 3
-console.log("\nExercise 3:")
+console.log("\nExercise 3: Name Lengths")
 const nameLength = names.map(name => name.length)
 console.log(nameLength)
+
+//Exercise 4
+console.log("\nExercise 4: Sorting Provinces")
+const sortingProvinces = [...provinces].sort();
+console.log(sortingProvinces);
+
+//Exercise 5
