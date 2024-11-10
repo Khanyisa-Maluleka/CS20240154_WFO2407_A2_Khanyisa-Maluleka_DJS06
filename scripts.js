@@ -16,3 +16,4 @@ const products = [
 
 console.log("Names and Provinces:")
 names.forEach(name => console.log(name))
+provinces.forEach(province => console.log(province))
