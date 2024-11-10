@@ -68,3 +68,28 @@ console.log(products
         .filter(item => item.price !== '' && item.price !== ' ')
         .reduce((total, item) => total + Number(item.price), 0)
 );
+
+//Advanced Exercise 4
+console.log("\nAdvanced Exercise 4: Concatenating Product Names into a Single String")
+products.reduce(item => m)
+
+//Advanced Exercise 5
+console.log('\nAdvanced Exercise 5: Price Extremes');
+console.log(
+    products.reduce((extremes, item) => {
+        const price = Number(item.price);
+        if (!isNaN(price) && item.price !== '' && item.price !== ' ') {
+            if (!extremes.highest || price > extremes.highest.price) {
+                extremes.highest = { product: item.product, price };
+            }
+            if (!extremes.lowest || price < extremes.lowest.price) {
+                extremes.lowest = { product: item.product, price };
+            }
+        }
+        return extremes;
+    }, { highest: null, lowest: null }),
+    result => `Highest: ${result.highest.product} (${result.highest.price}). Lowest: ${result.lowest.product} (${result.lowest.price})`
+);
+
+
+
