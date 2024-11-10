@@ -43,3 +43,15 @@ console.log("\nExercise 5: Provinces without 'Cape'")
 const provincesWithoutCape = provinces.filter(province => !province.includes("Cape"));
 console.log(`Number of provinces with 'Cape': ${provinces.length - provincesWithoutCape.length}`);
 
+//Exercise 6
+console.log("\nExercise 6: Finding 'S'")
+const containsS = names.some(name => name.toLowerCase().includes("s"))
+names.map(name => containsS ? console.log(name) : name)
+
+//Exercise 7
+console.log('\nExercise 7: Names to Provinces Map');
+const nameAndProvince = names.reduce((accumulator, name, index) => {
+    accumulator[name] = provinces[index];
+    return accumulator;
+}, {});
+console.log(nameProvinceMap);
