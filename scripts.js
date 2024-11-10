@@ -75,8 +75,7 @@ products.reduce(item => m)
 
 //Advanced Exercise 5
 console.log('\nAdvanced Exercise 5: Price Extremes');
-console.log(
-    products.reduce((extremes, item) => {
+console.log( products.reduce((extremes, item) => {
         const price = Number(item.price);
         if (!isNaN(price) && item.price !== '' && item.price !== ' ') {
             if (!extremes.highest || price > extremes.highest.price) {
@@ -91,5 +90,14 @@ console.log(
     result => `Highest: ${result.highest.product} (${result.highest.price}). Lowest: ${result.lowest.product} (${result.lowest.price})`
 );
 
-
+//Advanced Exercise 6
+console.log('\nAdvanced Exercise 6: Transformed Products');
+console.log(products.reduce((acc, curr) => {
+      acc.push({
+          name: curr.product,
+          cost: curr.price
+      });
+      return acc;
+  }, [])
+);
 
