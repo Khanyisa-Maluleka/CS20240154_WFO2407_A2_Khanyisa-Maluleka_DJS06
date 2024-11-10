@@ -14,6 +14,7 @@ const products = [
   { product: 'tea', price: '' },
 ]
 
+//Exercises
 //Exercise 1
 console.log("Exercise 1: forEach method")
 console.log("\nNames:")
@@ -54,4 +55,9 @@ const nameAndProvince = names.reduce((accumulator, name, index) => {
     accumulator[name] = provinces[index];
     return accumulator;
 }, {});
-console.log(nameProvinceMap);
+console.log(nameAndProvince);
+
+//Advanced Exercises
+//Advanced Exercise 1
+console.log("\nAdvanced Exercise 1: Logging Products")
+products.forEach(product => console.log(product))
