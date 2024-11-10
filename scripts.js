@@ -60,4 +60,8 @@ console.log(nameAndProvince);
 //Advanced Exercises
 //Advanced Exercise 1
 console.log("\nAdvanced Exercise 1: Logging Products")
-products.forEach(product => console.log(product))
+products.forEach(item => console.log(item.product))
+
+//Advanced Exercise 2
+console.log("\nAdvanced Exercise 2: Filtering products")
+console.log(products.filter(item => item.product.length>5))
