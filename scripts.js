@@ -21,3 +21,6 @@ console.log("Provinces:")
 provinces.forEach(province => console.log(province))
 console.log("Names and Provinces:")
 names.forEach((name, index) => console.log(`${name} (${provinces[index]})`))
+
+//Exercise 2
+provinces.map(province => console.log(province.toUpperCase))
