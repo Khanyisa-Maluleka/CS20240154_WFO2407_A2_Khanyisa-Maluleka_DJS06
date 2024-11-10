@@ -15,12 +15,20 @@ const products = [
 ]
 
 //Exercise 1
-console.log("Names:")
+console.log("Exercise 1:")
+console.log("\nNames:")
 names.forEach(name => console.log(name))
-console.log("Provinces:")
+console.log("\nProvinces:")
 provinces.forEach(province => console.log(province))
-console.log("Names and Provinces:")
+console.log("\nNames and Provinces:")
 names.forEach((name, index) => console.log(`${name} (${provinces[index]})`))
 
 //Exercise 2
-provinces.map(province => console.log(province.toUpperCase))
+console.log("\nExercise 2:")
+const provinceToUpperCase = provinces.map(province => province.toUpperCase())
+console.log(provinceToUpperCase)
+
+//Exercise 3
+console.log("\nExercise 3:")
+const nameLength = names.map(name => name.length)
+console.log(nameLength)
