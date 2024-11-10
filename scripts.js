@@ -14,7 +14,9 @@ const products = [
   { product: 'tea', price: '' },
 ]
 
-console.log("Exercise 1: forEach method") //Exercise 1
+
+//Exercise 1
+console.log("Exercise 1: forEach method") 
 console.log("\nNames:")
 names.forEach(name => console.log(name))
 console.log("\nProvinces:")
@@ -22,33 +24,33 @@ provinces.forEach(province => console.log(province))
 console.log("\nNames and Provinces:")
 names.forEach((name, index) => console.log(`${name} (${provinces[index]})`))
 
-
-console.log("\nExercise 2: Provinces to Uppercase") //Exercise 2
+//Exercise 2
+console.log("\nExercise 2: Provinces to Uppercase") 
 const provinceToUpperCase = provinces.map(province => province.toUpperCase())
 console.log(provinceToUpperCase)
 
-
-console.log("\nExercise 3: Name Lengths") //Exercise 3
+//Exercise 3
+console.log("\nExercise 3: Name Lengths") 
 const nameLength = names.map(name => name.length)
 console.log(nameLength)
 
-
-console.log("\nExercise 4: Sorting Provinces") //Exercise 4
+//Exercise 4
+console.log("\nExercise 4: Sorting Provinces") 
 const sortingProvinces = [...provinces].sort();
 console.log(sortingProvinces);
 
-
-console.log("\nExercise 5: Provinces without 'Cape'") //Exercise 5
+//Exercise 5
+console.log("\nExercise 5: Provinces without 'Cape'") 
 const provincesWithoutCape = provinces.filter(province => !province.includes("Cape"));
 console.log(`Number of provinces with 'Cape': ${provinces.length - provincesWithoutCape.length}`);
 
+//Exercise 6
+console.log("\nExercise 6: Finding 'S'") 
+const containsS = names.map(name => name.toLowerCase().includes("s"))
+console.log(containsS)
 
-console.log("\nExercise 6: Finding 'S'") //Exercise 6
-const containsS = names.some(name => name.toLowerCase().includes("s"))
-names.map(name => containsS ? console.log(name) : name)
-
-
-console.log('\nExercise 7: Names to Provinces Map'); //Exercise 7
+//Exercise 7
+console.log('\nExercise 7: Names to Provinces Map'); 
 const nameAndProvince = names.reduce((accumulator, name, index) => {
     accumulator[name] = provinces[index];
     return accumulator;
@@ -56,14 +58,16 @@ const nameAndProvince = names.reduce((accumulator, name, index) => {
 console.log(nameAndProvince);
 
 
-
-console.log("\nAdvanced Exercise 1: Logging Products") //Advanced Exercise 1
+//Advanced Exercise 1
+console.log("\nAdvanced Exercise 1: Logging Products") 
 products.forEach(item => console.log(item.product))
 
-console.log("\nAdvanced Exercise 2: Filtering Products") //Advanced Exercise 2
+//Advanced Exercise 2
+console.log("\nAdvanced Exercise 2: Filtering Products") 
 console.log(products.filter(item => item.product.length>5))
 
-console.log("\nAdvanced Exercise 3: Total Price") //Advanced Exercise 3
+//Advanced Exercise 3
+console.log("\nAdvanced Exercise 3: Total Price") 
 console.log(products
         .filter(item => item.price !== '' && item.price !== ' ')
         .reduce((total, item) => total + Number(item.price), 0)
@@ -71,7 +75,7 @@ console.log(products
 
 //Advanced Exercise 4
 console.log("\nAdvanced Exercise 4: Concatenating Product Names into a Single String")
-products.reduce(item => m)
+console.log('Products:', products.reduce((str, item) => str + item.product + ', ', '').slice(0, -2));
 
 //Advanced Exercise 5
 console.log('\nAdvanced Exercise 5: Price Extremes');
