@@ -39,3 +39,7 @@ const sortingProvinces = [...provinces].sort();
 console.log(sortingProvinces);
 
 //Exercise 5
+console.log("\nExercise 5: Provinces without 'Cape'")
+const provincesWithoutCape = provinces.filter(province => !province.includes("Cape"));
+console.log(`Number of provinces with 'Cape': ${provinces.length - provincesWithoutCape.length}`);
+
