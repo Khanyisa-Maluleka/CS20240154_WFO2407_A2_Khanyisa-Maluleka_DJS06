@@ -13,3 +13,5 @@ const products = [
   { product: 'coffee', price: 10 },
   { product: 'tea', price: '' },
 ]
+
+console.log("Names and Provinces:")
